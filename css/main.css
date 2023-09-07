@@ -1,0 +1,183 @@
+/* NOTA DE ORGANICAÇÃO:
+ * - esta organização do mais genérico para o mais especifico
+ * - sub dividido pelas partes secçoes da pagina
+ * - primeiro aparece as tag de html (h3, h4, img)
+ * - segundo os ids
+ * - classes ( e manter sempre a escalada dos ultimos 3 pontos dentro de cada sub seccao)
+ * - caso no futuro entre media queries, fica no fim do ficheiro ainda depois das keyframes 
+ 		 e dentro da media query seguir as mesmas regras que aqui estão desde o inicio
+*/
+
+/* INICIO ESTILOS GENERICOS */
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	list-style: none;
+	font-family: Arial;
+}
+
+h3{
+	font-size: 140%;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 1% 0;
+}
+p{
+	font-size: 17px;
+	font-weight: 600;
+}
+
+input{
+	width: 50%;
+	padding: 2%;
+	border-radius: 10px;
+	border: none;
+	font-size: 18px;
+}
+
+button{
+	padding: 1.8%;
+	width: 20%;
+	border-radius: 10px;
+	font-size: 18px;
+	cursor: pointer;
+	transition: .3s;
+}
+
+button:hover{
+	background: orange;
+	color: #fff;
+}
+
+/* FIM ESTILOS GENERICOS */
+
+.cabecalho{
+	text-align: center;
+	font-size: 30px;
+	padding: 1rem 0;
+	text-transform: uppercase;
+}
+
+/* INICIO BOARD */
+.board{
+	display: flex;
+	background: #888;
+	padding: 1rem 3rem;
+	justify-content: space-around;
+	width: 100%;
+}
+
+.board img {
+	width: 5.6%;
+	float: right;
+	cursor: pointer;
+}
+
+.board .board-section{
+	width: 30%;
+	height: auto;
+	border-radius: 10px;
+	padding-bottom: 2%;
+}
+
+.board .board-section.to-do{
+	background: pink;
+}
+
+.board .board-section.doing{
+	background: skyblue;
+}
+
+.board .board-section.done{
+	background: blueviolet;
+}
+
+
+.board .board-section .actions{
+	padding: 1%;
+}
+
+.board .cardList{
+	display: flex;
+	flex-direction: column;
+	padding: 0 2%;
+	flex-wrap: wrap;
+}
+
+.board .cardList .card{
+	background: #fff;
+	border-radius: 5px;
+	padding: 5% 2%;
+	height: auto;
+	margin-bottom: 2%;
+	box-shadow: 2px 2px 2px 2px #333;
+
+	display: flex;
+	flex-flow: row nowrap;
+}
+
+.board .cardList .card > * {
+	flex: 1 0 50%;
+}
+
+.board .cardList .card > #delete {
+	max-width: 5%;
+	height: 100%;
+	margin: auto;
+}
+/* FIM BOARD */
+
+/* INICIO FORMULARIO */
+.formulario-background{
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.7);
+	position: absolute;
+	top: 0;
+	display: none;
+	animation-name: animate;
+	animation-duration: .3s;
+	transition: 1s;
+}
+
+.formulario-background .formulario-container {
+	width: 50%;
+	height: 50%;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	position: absolute;
+	top: 25%;
+	right: 25%;
+}
+
+.formulario-background .formulario-container img{
+	width: 5%;
+	cursor: pointer;
+	background: #fff;
+	border-radius: 50%;
+	margin-bottom: 1rem;
+	align-self: flex-end;
+}
+
+.formulario-background .formulario-container .formulario {
+	background: #888;
+	box-shadow: 0px 0px 10px 7px #000;
+	border-radius: 10px;
+	padding: 2% 0;
+	text-align: center;
+}
+/* FIM FORMULARIO */
+
+/* INICIO KEY FRAMES */
+
+@keyframes animate{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
+/* FIM KEY FRAMES */

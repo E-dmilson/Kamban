@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<title>Cronograma de estudos</title>
+</head>
+<body>
+
+<header class="cabecalho">
+	<h2>Cronograma</h2>
+</header>
+
+<section class="board">
+	<div class="board-section to-do">
+		<h3>To do</h3>
+		<div class="actions">
+			<img src="icons/add.png" id="add">
+		</div><br>
+		<div class="cardList slt-to-do">
+			<div class="card">
+				<p>Blah blah blah
+					<img src="icons/delete.png" alt="01" id="delete">
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="board-section doing">
+		<h3>Doing</h3>
+		<div class="actions">
+			<img src="icons/add.png" id="add">
+		</div><br>
+		<div class="cardList slt-doing">
+			<div class="card">
+				<p>Blah blah blah
+					<img src="icons/delete.png" alt="02" id="delete">
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="board-section done">
+		<h3>Done</h3>
+		<div class="actions">
+			<img src="icons/add.png" id="add">
+		</div><br>
+		<div class="cardList slt-done">
+			<div class="card">
+				<p>Blah blah blah
+					<img src="icons/delete.png" alt="03" id="delete">
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="formulario-background">
+	<div class="formulario-container">
+		<img src="icons/cancel.png" id="fecharJanela">
+		<div class="formulario">
+			<input type="text" class="addNote" placeholder="Adicione uma tarefa">
+			<button class="add">Add</button>
+		</div>
+	</div>
+</section>
+
+<input type="hidden" id="addTo">
+<script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
